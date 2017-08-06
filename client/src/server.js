@@ -1,6 +1,5 @@
-const fetch = require('node-fetch');
-// import React from 'react';
 // import Router from 'react-router';
+const fetch = require('node-fetch');
 
 //using BrowserRouter to send data to React
 
@@ -15,13 +14,12 @@ async function showTrack(country) {
   return body;
 }
 
-showTrack("australia")
+export default showTrack("australia")
   //building promsise chain
   .then(track => {
-   console.log(track.topartists.artist, "hello");
+    const tracks = track.topartists.artist;
+    console.log(tracks);
   })
   .catch(err => {
     console.error(`Error: ${err.message}`);
   });
-
-// module.exports = server;
