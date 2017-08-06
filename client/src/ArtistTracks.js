@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import './artist-tracks.css';
+import './server.js';
 //adding react router from artist on app page to track page
 
 class ArtistTracks extends Component {
   render() {
     return (
       <div className="artist-tracks">
-        <h1>Artists Name</h1>
-        <img src="#" alt="Artist Page" />
         <ul>
-          //li forEach in React track
-          <li></li>
+          Artist.all().map(p => (
+            <li key={p.artist}>
+              <h1>{p.artist}</h1>
+              <img src="{p.artist.image}" alt="Artist Page" />
+            </li>
+          ))
         </ul>
       </div>
     )
