@@ -6,8 +6,6 @@ import ArtistTracks from './ArtistTracks.js';
 import Header from './Header.js';
 import './App.css';
 
-        // <Nav></Nav>
-
 class Home extends Component {
   render() {
     return (

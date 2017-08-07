@@ -47,6 +47,7 @@ class Artist extends Component {
 
     return (
       <div className="artist">
+        <h1>Search Country</h1>
         <input type="text" onChange={e => this.onChange(e)} />
         <button type="submit" onClick={() => this.search()}>Search</button>
         <ul>
@@ -56,8 +57,10 @@ class Artist extends Component {
           return (
             <li key={track.name}>
               <Link to={link}>
-                <h1>{track.name}</h1>
-                <img src={track.image[4]['#text']} alt="Artist Page" />
+                <h2>{track.name}</h2>
+                <div className="artistImg-container">
+                  <img src={track.image[4]['#text']} alt="Artist Page" />
+                </div>
               </Link>
             </li>
           );

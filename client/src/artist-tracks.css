@@ -1,0 +1,9 @@
+.artist-tracks {
+  width: 200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.artist-tracks h1 {
+  text-align: center;
+}

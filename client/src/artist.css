@@ -1,0 +1,52 @@
+.artist input {
+  width: 160px;
+  height: 25px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.artist button {
+  width: 100px;
+  height: 30px;
+  padding: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.artist a {
+  text-decoration: none;
+  color: black;
+}
+
+.artist a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+.artist ul {
+  padding: 0;
+}
+
+.artist li {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+}
+
+.artistImg-container {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+}
+
+.artistImg-container:hover {
+  transform: scale(1.1);
+}
+
+.artist img {
+  width: auto;
+  min-width: 200px;
+  height: 260px;
+}
