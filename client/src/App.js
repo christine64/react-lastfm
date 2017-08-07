@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 //add react router to send data from tracks into ArtistTrack page
-// import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './server.js';
 import Artist from './Artist.js';
+import ArtistTracks from './ArtistTracks.js';
 import './App.css';
 
-class App extends Component {
+class Home extends Component {
   render() {
     return (
       <div className="App">
@@ -18,6 +19,19 @@ class App extends Component {
         </p>
       </div>
     );
+  }
+}
+
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div>
+          <Route exact path="/" component={Home}></Route>
+          <Route path="/artist/:name" component={ArtistTracks}></Route>
+        </div>
+      </BrowserRouter>
+    )
   }
 }
 

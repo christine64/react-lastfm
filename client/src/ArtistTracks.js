@@ -1,19 +1,38 @@
 import React, { Component } from 'react';
 import './artist-tracks.css';
 import './server.js';
-//adding react router from artist on app page to track page
+import { showArtistTracks } from './server.js';
 
 class ArtistTracks extends Component {
+  constructor(props) {
+    super(props);
+
+    this.name = this.props.match.params.name;
+    
+    this.state = {
+      artistTracks: []
+    }
+  }
+  componentDidMount() {
+    showArtistTracks(this.name)
+      .then(artist => {
+        console.log(artist);
+        this.setState({
+          artistTracks: artist.toptracks.track
+        });
+      });
+  }
   render() {
+    const artistTracks = this.state.artistTracks;
     return (
       <div className="artist-tracks">
+        <h1>{this.name}</h1>
         <ul>
-          Artist.all().map(p => (
-            <li key={p.artist}>
-              <h1>{p.artist}</h1>
-              <img src="{p.artist.image}" alt="Artist Page" />
-            </li>
-          ))
+          {artistTracks.map(track => {
+            return (
+              <li>{track.name}</li> 
+            )
+          })}
         </ul>
       </div>
     )
