@@ -5,7 +5,9 @@ class Header extends Component {
   render () {
     return (
       <div className="AppHeader">
-        <header className="header-title">LastFM API</header>
+        <a href="/">
+          <header className="header-title">LastFM API</header>
+        </a>
       </div>
     )
   } 

@@ -5,6 +5,15 @@
   color: white;
 }
 
-.AppHeader header {
+.AppHeader a {
+  text-align: center;
+  color: #fff;
+}
+
+.AppHeader a:hover {
+  color: red;
+}
+
+.AppHeader .header-title {
   padding-top: 14px;
 }
