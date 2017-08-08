@@ -17,3 +17,5 @@ Open up development environment
 npm start
 ```
 This will start up development view in the browser, open up in http://localhost:3000
+
+Accessible on AWS: http://aws-website-ch-react-lastfm-hiiqz.s3-website-us-east-1.amazonaws.com/
